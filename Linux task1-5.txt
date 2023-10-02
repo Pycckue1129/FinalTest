@@ -1,0 +1,191 @@
+ab@ab-VirtualBox:~$ sudo su
+[sudo] пароль для ab: 
+root@ab-VirtualBox:/home/ab# cd /
+root@ab-VirtualBox:/# cat > "Pets"
+dogs
+cats
+hamsters
+root@ab-VirtualBox:/# cat > "PackAnimals"
+horses
+camels
+donkeys
+root@ab-VirtualBox:/# cat "Pets" "PackAnimals" > "FriendsOfMan"
+root@ab-VirtualBox:/# cat "FriendsOfMan"
+dogs
+cats
+hamsters
+horses
+camels
+donkeys
+root@ab-VirtualBox:/# mkdir FinalTest
+root@ab-VirtualBox:/# mv FriendsOfMan FinalTest/
+
+
+
+
+
+
+
+ab@ab-VirtualBox:~$ sudo su
+[sudo] пароль для ab: 
+root@ab-VirtualBox:/home/ab# cd /
+root@ab-VirtualBox:/# cat > "Pets"
+dogs
+cats
+hamsters
+root@ab-VirtualBox:/# cat > "PackAnimals"
+horses
+camels
+donkeys
+root@ab-VirtualBox:/# cat "Pets" "PackAnimals" > "FriendsOfMan"
+root@ab-VirtualBox:/# cat "FriendsOfMan"
+dogs
+cats
+hamsters
+horses
+camels
+donkeys
+root@ab-VirtualBox:/# mkdir FinalTest
+root@ab-VirtualBox:/# mv FriendsOfMan FinalTest/
+root@ab-VirtualBox:/# wget -O mysql-apt-config.deb https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+--2023-10-02 17:12:10--  https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+Распознаётся dev.mysql.com (dev.mysql.com)… 184.51.238.43, 2001:2030:21:19e::2e31, 2001:2030:21:187::2e31
+Подключение к dev.mysql.com (dev.mysql.com)|184.51.238.43|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 302 Moved Temporarily
+Адрес: https://repo.mysql.com//mysql-apt-config_0.8.17-1_all.deb [переход]
+--2023-10-02 17:12:11--  https://repo.mysql.com//mysql-apt-config_0.8.17-1_all.deb
+Распознаётся repo.mysql.com (repo.mysql.com)… 23.37.58.58, 2a02:26f0:9500:aa6::1d68, 2a02:26f0:9500:a9c::1d68
+Подключение к repo.mysql.com (repo.mysql.com)|23.37.58.58|:443... соединение установлено.
+HTTP-запрос отправлен. Ожидание ответа… 200 OK
+Длина: 35592 (35K) [application/x-debian-package]
+Сохранение в: ‘mysql-apt-config.deb’
+
+mysql-apt-config.de 100%[===================>]  34,76K  --.-KB/s    за 0,04s   
+
+2023-10-02 17:12:11 (815 KB/s) - ‘mysql-apt-config.deb’ сохранён [35592/35592]
+
+root@ab-VirtualBox:/# dpkg -i mysql-apt-config.deb
+Выбор ранее не выбранного пакета mysql-apt-config.
+(Чтение базы данных … на данный момент установлено 179895 файлов и каталогов.)
+Подготовка к распаковке mysql-apt-config.deb …
+Распаковывается mysql-apt-config (0.8.17-1) …
+Настраивается пакет mysql-apt-config (0.8.17-1) …
+Warning: apt-key should not be used in scripts (called from postinst maintainerscript of the package mysql-apt-config)
+Warning: apt-key is deprecated. Manage keyring files in trusted.gpg.d instead (see apt-key(8)).
+OK
+root@ab-VirtualBox:/# sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease                      
+Пол:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease [119 kB]     
+Пол:3 http://repo.mysql.com/apt/ubuntu bionic InRelease [20,0 kB]              
+Пол:4 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease [109 kB]   
+Пол:5 http://security.ubuntu.com/ubuntu jammy-security InRelease [110 kB]  
+Ошб:3 http://repo.mysql.com/apt/ubuntu bionic InRelease
+  Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY 467B942D3A79BD29
+Пол:6 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1 014 kB]
+Пол:7 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [495 kB]
+Пол:8 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [227 kB]
+Пол:9 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 DEP-11 Metadata [101 kB]
+Пол:10 http://ru.archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [15,6 kB]
+Пол:11 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [905 kB]
+Пол:12 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted i386 Packages [32,3 kB]
+Пол:13 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [146 kB]
+Пол:14 http://ru.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 c-n-f Metadata [532 B]
+Пол:15 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [987 kB]
+Пол:16 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe i386 Packages [657 kB]
+Пол:17 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [215 kB]
+Пол:18 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 DEP-11 Metadata [289 kB]
+Пол:19 http://ru.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [21,9 kB]
+Пол:20 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [41,6 kB]
+Пол:21 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 DEP-11 Metadata [940 B]
+Пол:22 http://ru.archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [472 B]
+Пол:23 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main i386 Packages [33,9 kB]
+Пол:24 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [41,7 kB]
+Пол:25 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 DEP-11 Metadata [4 916 B]
+Пол:26 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main DEP-11 48x48 Icons [16,1 kB]
+Пол:27 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main DEP-11 64x64 Icons [21,3 kB]
+Пол:28 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [804 kB]
+Пол:29 http://ru.archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Пол:30 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe i386 Packages [13,4 kB]
+Пол:31 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [24,3 kB]
+Пол:32 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 DEP-11 Metadata [17,8 kB]
+Пол:33 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe DEP-11 48x48 Icons [15,7 kB]
+Пол:34 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe DEP-11 64x64 Icons [25,6 kB]
+Пол:35 http://ru.archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [640 B]
+Пол:36 http://security.ubuntu.com/ubuntu jammy-security/main i386 Packages [328 kB]
+Пол:37 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [169 kB]
+Пол:38 http://security.ubuntu.com/ubuntu jammy-security/main amd64 DEP-11 Metadata [43,0 kB]
+Пол:39 http://security.ubuntu.com/ubuntu jammy-security/restricted i386 Packages [32,0 kB]
+Пол:40 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [889 kB]
+Пол:41 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [143 kB]
+Пол:42 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 c-n-f Metadata [532 B]
+Пол:43 http://security.ubuntu.com/ubuntu jammy-security/universe i386 Packages [559 kB]
+Пол:44 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [785 kB]
+Пол:45 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [144 kB]
+Пол:46 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 DEP-11 Metadata [40,1 kB]
+Пол:47 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [16,7 kB]
+Пол:48 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 Packages [36,5 kB]
+Пол:49 http://security.ubuntu.com/ubuntu jammy-security/multiverse amd64 c-n-f Metadata [260 B]
+Чтение списков пакетов… Готово                                     
+W: Ошибка GPG: http://repo.mysql.com/apt/ubuntu bionic InRelease: Следующие подписи не могут быть проверены, так как недоступен открытый ключ: NO_PUBKEY 467B942D3A79BD29
+E: Репозиторий «http://repo.mysql.com/apt/ubuntu bionic InRelease» не подписан.
+N: Обновление из этого репозитория нельзя выполнить безопасным способом, поэтому по умолчанию он отключён.
+N: Информацию о создании репозитория и настройках пользователя смотрите в справочной странице apt-secure(8).
+root@ab-VirtualBox:/# snap install mysql-shell
+mysql-shell 8.0.23 от Canonical✓ установлен
+root@ab-VirtualBox:/# sudo dpkg -r mysql-apt-config
+(Чтение базы данных … на данный момент установлено 179900 файлов и каталогов.)
+Удаляется mysql-apt-config (0.8.17-1) …
+root@ab-VirtualBox:/# sudo apt update
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu jammy InRelease
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu jammy-updates InRelease
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu jammy-backports InRelease            
+Сущ:4 http://security.ubuntu.com/ubuntu jammy-security InRelease               
+Чтение списков пакетов… Готово            
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Может быть обновлено 311 пакетов. Запустите «apt list --upgradable» для их показа.
+root@ab-VirtualBox:/# sudo apt autoremove
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово         
+Обновлено 0 пакетов, установлено 0 новых пакетов, для удаления отмечено 0 пакетов, и 311 пакетов не обновлено.
+root@ab-VirtualBox:/# snap apt remove mysql-shell
+ошибка: неизвестная команда "apt", см. 'snap help'.
+root@ab-VirtualBox:/# apt remove mysql-shell
+Чтение списков пакетов… Готово
+Построение дерева зависимостей… Готово
+Чтение информации о состоянии… Готово  
+root@ab-VirtualBox:/# snap remove mysql-shell       
+mysql-shell удален
+root@ab-VirtualBox:/# history
+    1  cd /
+    2  apt update
+    3  apt install docker-compose -y
+    4  apt install docker swarm -y
+    5  mkdir wordpress
+    6  cd wordpress/
+    7  nano docker-compose.yaml
+    8  docker ps -a
+    9  docker-compose images
+   10  docker-compose up -d
+   11  docker ps -a
+   12  docker-compose images
+   13  hostname -I
+   14  docker-compose down
+   15  cd /
+   16  cat > "Pets"
+   17  cat > "PackAnimals"
+   18  cat "Pets" "PackAnimals" > "FriendsOfMan"
+   19  cat "FriendsOfMan"
+   20  mkdir FinalTest
+   21  mv FriendsOfMan FinalTest/
+   22  wget -O mysql-apt-config.deb https://dev.mysql.com/get/mysql-apt-config_0.8.17-1_all.deb
+   23  dpkg -i mysql-apt-config.deb
+   24  sudo apt update
+   25  snap install mysql-shell
+   26  sudo dpkg -r mysql-apt-config
+   30  sudo apt update
+   32  sudo apt autoremove
+   33  snap remove mysql-shell
+   34  history
+root@ab-VirtualBox:/# 
